@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estacionamento</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 50%;
+    margin: 2rem auto;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #eee;
+    padding: 0.7rem;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+input, button {
+    width: 98%;    
+    padding: 0.6rem 0.4rem;
+    margin: 0.4rem;
+}
+
+button {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    background-color: #2225f3;
+    color: #ddd;
+    border-radius: 5px;
+}
+
+.delete {
+    background-color: rgb(231, 54, 54);
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+table {
+    background-color: #eee;
+    margin-top: .9rem;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 5px 25px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Sistema de Estacionamento</h1>
+    <input type="text" id="name" placeholder="Nome do veículo" autocomplete="off">
+    <input type="text" id="id" placeholder="Placa do veículo" autocomplete="off">
+    <button id="send">Registrar</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Veículo</th>
+        <th>Placa</th>
+        <th>Horário</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="garage"></tbody>
+  </table>
+  <script src="main.js"></script>
+</body>
+</html>
